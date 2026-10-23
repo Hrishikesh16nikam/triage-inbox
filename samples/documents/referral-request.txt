@@ -1,0 +1,6 @@
+REFERRAL REQUEST
+
+From: Lakeside Family Practice (synthetic example)
+Patient: J. Ortega   MRN: LFP-220981   DOB: 11/02/1979
+
+Please schedule this patient with a cardiology specialist for evaluation of intermittent palpitations. Prior authorization has been submitted to the insurer. Contact our office at 555-010-7788 or referrals@lakeside.example.org with questions.

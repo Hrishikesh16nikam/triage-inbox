@@ -1,0 +1,15 @@
+[project]
+name = "triage-inbox"
+version = "0.1.0"
+description = "Secure triage for voicemails and documents: transcription, PII redaction, classification and a tamper-evident audit log"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [{ name = "Hrishikesh Nikam" }]
+dependencies = []  # standard library only
+
+[project.optional-dependencies]
+whisper = ["openai-whisper"]
+
+[tool.ruff]
+line-length = 120

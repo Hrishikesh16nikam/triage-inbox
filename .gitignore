@@ -1,0 +1,12 @@
+data/
+__pycache__/
+*.pyc
+.venv/
+venv/
+.DS_Store
+.idea/
+.vscode/
+*.db
+*.db-wal
+*.db-shm
+secret.key

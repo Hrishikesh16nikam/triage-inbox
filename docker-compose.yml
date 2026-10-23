@@ -1,0 +1,25 @@
+# docker compose up --build
+# then, once: docker compose exec app python -m triage seed-demo
+services:
+  app:
+    build: .
+    ports:
+      - "127.0.0.1:8000:8000"
+    volumes:
+      - triage-data:/data
+    environment:
+      TRIAGE_CLASSIFIER: ${TRIAGE_CLASSIFIER:-rules}
+      TRIAGE_OLLAMA_URL: http://ollama:11434
+
+  # Optional local LLM: docker compose --profile llm up
+  # then: docker compose exec ollama ollama pull llama3.1:8b
+  # and restart with TRIAGE_CLASSIFIER=ollama
+  ollama:
+    image: ollama/ollama
+    profiles: ["llm"]
+    volumes:
+      - ollama-models:/root/.ollama
+
+volumes:
+  triage-data:
+  ollama-models:
